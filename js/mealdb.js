@@ -1,13 +1,14 @@
-const searchFood = () => {
+const searchFoodButton = () => {
     const searchField = document.getElementById('search-field');
     const searchFieldText = searchField.value;
-    if (searchFieldText == '') {
 
+    // if search field value empty string then stop function will function and not show anything
+    if (searchFieldText === '') {
+        return;
     }
-    else {
-        // console.log(searchFieldText);
-        searchField.value = '';
 
+    // if search field value not empty string 
+    else {
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchFieldText}`
         // console.log(url)
         fetch(url)
@@ -24,12 +25,6 @@ const displaySearch = (meals, searchFieldText) => {
     // ডাইনামিক লিংক থেকে পাওয়া প্রয়োজনীয় জিনিশ এখানে সেট করা হচ্ছে।
     const setSearchResult = document.getElementById('set-search-result');
     setSearchResult.textContent = '';
-
-    // সার্চ রেজাল্ট শূন্য হলে
-    if (setSearchResult.innerHTML == '') {
-        alert(`Your search - ${searchFieldText} - did not match any documents.`)
-    }
-
     // প্যারামিটারের উপর লুপ চালিয়ে একটা এরো ফাংশন ক্রিয়েট করা হইছে। এবং ফাংশনে প্যারামিটার লুপ করে করে তারপর পাঠানো হচ্ছে।
     meals.forEach(meal => {
         // console.log(meal)

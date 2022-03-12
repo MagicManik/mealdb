@@ -1,3 +1,4 @@
+// Function 01:
 const searchFoodButton = () => {
     const searchField = document.getElementById('search-field');
     const searchFieldText = searchField.value;
@@ -7,7 +8,7 @@ const searchFoodButton = () => {
         return;
     }
 
-    // if search field value not empty string 
+    // if search field value not empty string then function continue
     else {
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchFieldText}`
         // console.log(url)
@@ -19,12 +20,16 @@ const searchFoodButton = () => {
 }
 
 
-// উপরে ডাইনামিক লিংক ক্রিয়েট করে সেখান থেকে যা গেট করছি ওটাকে এই ফাংশনে ইনপুট হিসেবে দেয়া হচ্ছে।
-const displaySearch = (meals, searchFieldText) => {
+// Function 02:
+// উপরের API কে ডাইনামিক API তে কনভার্ট করে সেখান থেকে যা গেট করছি ওটাকে এই ফাংশনে প্যারামিটার হিসেবে দেয়া হচ্ছে।
+const displaySearch = (meals) => {
 
-    // ডাইনামিক লিংক থেকে পাওয়া প্রয়োজনীয় জিনিশ এখানে সেট করা হচ্ছে।
+    // এখানে API থেকে পাওয়া প্রয়োজনীয় জিনিশ Append করবো।
     const setSearchResult = document.getElementById('set-search-result');
+
+    // প্রত্যেকবার Append করার আগে UI Empty করে দিবো।
     setSearchResult.textContent = '';
+
     // প্যারামিটারের উপর লুপ চালিয়ে একটা এরো ফাংশন ক্রিয়েট করা হইছে। এবং ফাংশনে প্যারামিটার লুপ করে করে তারপর পাঠানো হচ্ছে।
     meals.forEach(meal => {
         // console.log(meal)

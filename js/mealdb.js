@@ -1,3 +1,4 @@
+// catch id for search by enter key
 const searchButton = document.getElementById("button-search");
 const searchField = document.getElementById("search-field");
 

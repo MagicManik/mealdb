@@ -51,6 +51,7 @@ const displaySearch = (meals) => {
 }
 
 
+// মিল এর ডিটেইলস লোড করা হয়েছে।
 const loadMealDetail = mealId => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
     fetch(url)
@@ -59,8 +60,9 @@ const loadMealDetail = mealId => {
 }
 
 
+// মিল এর ডিটেইলস UI তে শো করানো হয়েছে।
 const displayMealDetail = mealsDetail => {
-    console.log(mealsDetail)
+    // console.log(mealsDetail)
     const setMealDetail = document.getElementById('set-meal-details')
     setMealDetail.textContent = '';
     const div = document.createElement('div')

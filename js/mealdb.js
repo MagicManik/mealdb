@@ -30,7 +30,7 @@ const displaySearch = (meals) => {
     // প্রত্যেকবার Append করার আগে UI Empty করে দিবো।
     setSearchResult.textContent = '';
 
-    // প্যারামিটারের উপর লুপ চালিয়ে একটা এরো ফাংশন ক্রিয়েট করা হইছে। এবং ফাংশনে প্যারামিটার লুপ করে করে তারপর পাঠানো হচ্ছে।
+    // প্যারামিটারের উপর For Each চালিয়ে তার ভেতর একটা Arrow Function ক্রিয়েট করা হয়েছে। এবং ঐ Arrow Function এর প্যারামিটার হিসেবে For Each  করে পাওয়া প্রত্যেকটা এলিমেন্টকে পাঠানো হয়েছে।
     meals.forEach(meal => {
         // console.log(meal)
         const div = document.createElement('div')

@@ -1,8 +1,20 @@
+const searchButton = document.getElementById("button-search");
+const searchField = document.getElementById("search-field");
+
+// function 04: search by enter key
+searchField.addEventListener("keyup", function (event) {
+    if (event.key === 'Enter') {
+        searchButton.click();
+    }
+
+});
+
+
 // Function 01:
 const searchFoodButton = () => {
     const searchField = document.getElementById('search-field');
     const searchFieldText = searchField.value;
-    searchField.value = ''
+    searchField.value = '';
 
     // if search field value empty string then stop function will function and not show anything
     if (searchFieldText === '') {

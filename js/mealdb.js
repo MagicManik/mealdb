@@ -2,6 +2,7 @@
 const searchFoodButton = () => {
     const searchField = document.getElementById('search-field');
     const searchFieldText = searchField.value;
+    searchField.value = ''
 
     // if search field value empty string then stop function will function and not show anything
     if (searchFieldText === '') {
@@ -60,6 +61,7 @@ const loadMealDetail = mealId => {
 }
 
 
+// Function: 03
 // মিল এর ডিটেইলস UI তে শো করানো হয়েছে।
 const displayMealDetail = mealsDetail => {
     // console.log(mealsDetail)

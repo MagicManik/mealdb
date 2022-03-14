@@ -14,9 +14,14 @@ searchField.addEventListener("keyup", function (event) {
 // Function 01:
 const searchFoodButton = () => {
     const searchField = document.getElementById('search-field');
+
+    // empty search field when button click
     const searchFieldText = searchField.value;
     searchField.value = '';
 
+    // empty meal detail when button click
+    const setMealDetail = document.getElementById('set-meal-details')
+    setMealDetail.textContent = '';
     // if search field value empty string then stop function will function and not show anything
     if (searchFieldText === '') {
         return;

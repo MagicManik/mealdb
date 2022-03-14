@@ -58,7 +58,7 @@ const displaySearch = (meals) => {
         div.innerHTML = `
         <div onclick="loadMealDetail(${meal.idMeal})" class="col">
             <div class="card h-100">
-                <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+                <img mx-auto" src="${meal.strMealThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${meal.strMeal}</h5>
                     <p class="card-text">${meal.strInstructions.slice(1, 200)}</p>

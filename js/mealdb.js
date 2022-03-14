@@ -22,6 +22,7 @@ const searchFoodButton = () => {
     // empty meal detail when button click
     const setMealDetail = document.getElementById('set-meal-details')
     setMealDetail.textContent = '';
+
     // if search field value empty string then stop function will function and not show anything
     if (searchFieldText === '') {
         return;
